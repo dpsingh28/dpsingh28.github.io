@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
+title: Multi-View Reconstruction
+description: 
+img: assets/img/projects/g3d_projects/mvrecon/mvrecon_icon.gif
 importance: 4
-category: fun
+category: Academic
 ---
 
 Every project has a beautiful feature showcase page.

@@ -5,7 +5,7 @@ permalink: /projects/
 description: 
 nav: true
 nav_order: 2
-display_categories: [work, fun]
+display_categories: [Research, Academic]
 horizontal: false
 ---
 
@@ -27,9 +27,11 @@ horizontal: false
     </div>
   </div>
   {%- else -%}
-  <div class="grid">
+  <!-- <div class="grid"> -->
+  <div class="row row-cols-1">
     {%- for project in sorted_projects -%}
-      {% include projects.html %}
+      {% include projects_horizontal.html %}
+      <!-- { include projects.html } -->
     {%- endfor %}
   </div>
   {%- endif -%}
@@ -48,9 +50,11 @@ horizontal: false
     </div>
   </div>
   {%- else -%}
-  <div class="grid">
+  <!-- <div class="grid"> -->
+  <div class="row row-cols-1">
     {%- for project in sorted_projects -%}
-      {% include projects.html %}
+      {% include projects_horzontal.html %}
+      <!-- { include projects.html } -->
     {%- endfor %}
   </div>
   {%- endif -%}

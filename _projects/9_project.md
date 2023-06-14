@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Point Cloud Classification and Segmentation
+title: Communications
 description: 
-img: assets/img/projects/l3d_projects/pointnet/pn2_concept.jpg
+img: 
 importance: 3
-category: Academic
+category: Research
 ---
 
 Every project has a beautiful feature showcase page.

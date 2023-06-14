@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Point Cloud Classification and Segmentation
+title: Affordance Prediction
 description: 
-img: assets/img/projects/l3d_projects/pointnet/pn2_concept.jpg
-importance: 3
-category: Academic
+img: 
+importance: 2
+category: Research
 ---
 
 Every project has a beautiful feature showcase page.

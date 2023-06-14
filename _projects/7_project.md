@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Point Cloud Classification and Segmentation
+title: MNIST Diffusion
 description: 
-img: assets/img/projects/l3d_projects/pointnet/pn2_concept.jpg
-importance: 3
+img: assets/img/projects/deep_learning/mnist/mnist_icon.png
+importance: 5
 category: Academic
 ---
 

@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Neural Radiance Fields (NeRF)
-description: 
-img: assets/img/nerf/crane_highres.gif
+description: <ul> <li>Hello</li> <li>Hello Again</li>  </ul>
+img: assets/img/projects/l3d_projects/nerf/crane_highres.gif
 importance: 1
-category: work
+category: Academic
 ---
 
 Every project has a beautiful feature showcase page.

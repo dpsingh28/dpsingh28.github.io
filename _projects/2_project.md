@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image
-img: assets/img/3.jpg
+title: Learning-based Single View to 3D 
+description: 
+img: assets/img/projects/l3d_projects/lsv3d/chair_index.gif
 importance: 2
-category: work
+category: Academic
 ---
 
 Every project has a beautiful feature showcase page.

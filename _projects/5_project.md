@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
+title: Absolute Conic-based Single View to 3D
+description: 
+img: assets/img/projects/g3d_projects/gsv3d/gsv3d_icon.gif
 importance: 3
-category: fun
+category: Academic
 ---
 
 Every project has a beautiful feature showcase page.
