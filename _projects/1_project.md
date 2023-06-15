@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Neural Radiance Fields (NeRF)
-description: <ul> <li>In this project, I implemented 3D volume and surface rendering pipelines, using NeRF</li> <li>The project was implemented in Python3. I also extended the baseline to improve surface reconstruction with realistic light shading using Phong Relighting and improved radiance computation using heiraarchical point sampling </li>  </ul>
+description: <ul> <li>In this project, I implemented 3D volume and surface rendering pipelines, using NeRF</li> <li>The project was implemented in Python3. I also extended the baseline to improve surface reconstruction with realistic light shading using Phong Relighting and improved radiance computation using heirarchical point sampling </li>  </ul>
 img: assets/img/projects/l3d_projects/nerf/crane_highres.gif
 importance: 1
 category: Academic
@@ -16,10 +16,10 @@ First part in the process to generate a NeRF is to desgn a ray sampler, capable 
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/projects/l3d_projects/nerf/coord_grid.png" title="Image Coordinates" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects/l3d_projects/nerf/coord_grid.png" title="Image Coordinates Visualization" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/projects/l3d_projects/nerf/coord_rays.png" title="Image Rays" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects/l3d_projects/nerf/coord_rays.png" title="Image Rays Visualization" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -43,7 +43,7 @@ Now, a volume rendering function is designed, which would take *input* the *samp
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-0 mt-md-0">
-        {% include figure.html path="assets/img/projects/l3d_projects/nerf/transmittance_fig.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects/l3d_projects/nerf/transmittance_fig.png" title="Transmittance Concept" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -57,7 +57,7 @@ A sample rendering using this renderer, for a cube is shown in the animation bel
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-0 mt-0 mt-md-0">
-        {% include figure.html path="assets/img/projects/l3d_projects/nerf/cube_render.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects/l3d_projects/nerf/cube_render.gif" title="Cube Render" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -69,7 +69,7 @@ A neural radiance field is a neural network used to approximate the implicit fun
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-0 mt-md-0">
-        {% include figure.html path="assets/img/projects/l3d_projects/nerf/nerf_mlp.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects/l3d_projects/nerf/nerf_mlp.png" title="NeRF MLP" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -114,7 +114,7 @@ This MLP was trained on the multi-view images of a bulldozer. The hyperparamters
 <br>
 <div class="row justify-content-sm-center">
     <div class="col-sm-0 mt-0 mt-md-0">
-        {% include figure.html path="assets/img/projects/l3d_projects/nerf/crane_highres.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects/l3d_projects/nerf/crane_highres.gif" title="NeRF final results" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -124,13 +124,13 @@ This MLP was trained on the multi-view images of a bulldozer. The hyperparamters
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-md-0">
-        {% include figure.html path="assets/img/projects/l3d_projects/nerf/progress/1.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects/l3d_projects/nerf/progress/1.gif" title="50 epochs" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-md-0">
-        {% include figure.html path="assets/img/projects/l3d_projects/nerf/progress/2.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects/l3d_projects/nerf/progress/2.gif" title="100 epochs" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-md-0">
-        {% include figure.html path="assets/img/projects/l3d_projects/nerf/progress/4.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects/l3d_projects/nerf/progress/4.gif" title="250 epochs" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
