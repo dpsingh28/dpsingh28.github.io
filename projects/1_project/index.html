@@ -127,14 +127,7 @@
           <article>
             <p>This project is an implementation of the ground-breaking 3D volumetric reconstruction work by Ben Mildenhall, <a href="https://www.matthewtancik.com/nerf" rel="external nofollow noopener" target="_blank">NeRF</a> and was written in Python3 and made use of the following libraries- PyTorch, NumPy, Hydra, and Matplotlib. This project was implemented as a part of my Spring 2023 course at CMU, <a href="https://learning3d.github.io/" rel="external nofollow noopener" target="_blank">Learnig for 3D Vision</a>, taught by <a href="http://shubhtuls.github.io/" rel="external nofollow noopener" target="_blank">Prof. Shubham Tulsiani</a>.</p>
 
-<!-- To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    --- -->
+<h1 id="volume-reconstruction">Volume Reconstruction</h1>
 
 <h3 id="ray-sampling">Ray Sampling</h3>
 <p>First part in the process to generate a NeRF is to desgn a ray sampler, capable of producing 3D rays in the world space, from a given set of image co-ordinates. This is done by generating a normalized meshgrid over the image dimensions, using <strong><em>Pytorch.meshgrid</em></strong> and using this to project rays into 3D space. These rays, currently in camera space, are then transformed into world space using appropriate camera extrinsics. The image below shows an exmaple of a meshgrid and the resulting rays visualized from the origin location.</p>
@@ -370,18 +363,9 @@ $$ T(x, x_{t_i}) = T(x, x_{t_{i-1}})e^{-(\sigma_{t_{i-1}} \Delta t_{i-1})} $$
     NeRF progression through training. From left to right - 50 epochs, 100 epochs, 250 epochs
 </div>
 
-<!-- 
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
- -->
+<h1 id="surface-reconstruction">Surface Reconstruction</h1>
+
+<p>The implementation of NeRF was extended to include Surface Reconstruction, using Neural Implicit Surfaces. Here, we implement a Neural SDF which is basically an approximation of the <a href="https://en.wikipedia.org/wiki/Signed_distance_function" rel="external nofollow noopener" target="_blank">signed distance function</a> (SDF) for any object using a neural network. SDF is the signed orthogonal distance of a given point to the boundary of an object. The sign determines whether the point lies inside or outside the boundary. The function has positive values for points inside the boundary.</p>
 
           </article>
 
