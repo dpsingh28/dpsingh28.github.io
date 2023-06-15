@@ -3,7 +3,7 @@ layout: page
 title: Point Cloud Classification and Segmentation
 description: 
 img: assets/img/projects/l3d_projects/pointnet/pn2_concept.jpg
-importance: 3
+importance: 6
 category: Academic
 ---
 
