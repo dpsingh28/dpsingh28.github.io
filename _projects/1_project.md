@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Neural Radiance Fields (NeRF)
-description: <ul> <li>In this project, I implemented 3D volume and surface rendering pipelines, using NeRF</li> <li>The project was implemented in Python3. I also extended the baseline to improve surface reconstruction with realistic lights using Phong Relighting and improved radiance computation using heiraarchical point sampling </li>  </ul>
+description: <ul> <li>In this project, I implemented 3D volume and surface rendering pipelines, using NeRF</li> <li>The project was implemented in Python3. I also extended the baseline to improve surface reconstruction with realistic light shading using Phong Relighting and improved radiance computation using heiraarchical point sampling </li>  </ul>
 img: assets/img/projects/l3d_projects/nerf/crane_highres.gif
 importance: 1
 category: Academic
