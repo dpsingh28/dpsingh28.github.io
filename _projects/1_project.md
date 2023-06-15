@@ -9,14 +9,7 @@ category: Academic
 
 This project is an implementation of the ground-breaking 3D volumetric reconstruction work by Ben Mildenhall, [NeRF](https://www.matthewtancik.com/nerf) and was written in Python3 and made use of the following libraries- PyTorch, NumPy, Hydra, and Matplotlib. This project was implemented as a part of my Spring 2023 course at CMU, [Learnig for 3D Vision](https://learning3d.github.io/), taught by [Prof. Shubham Tulsiani](http://shubhtuls.github.io/).
 
-<!-- To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    --- -->
+# Volume Reconstruction
 
 ### Ray Sampling
 First part in the process to generate a NeRF is to desgn a ray sampler, capable of producing 3D rays in the world space, from a given set of image co-ordinates. This is done by generating a normalized meshgrid over the image dimensions, using ***Pytorch.meshgrid*** and using this to project rays into 3D space. These rays, currently in camera space, are then transformed into world space using appropriate camera extrinsics. The image below shows an exmaple of a meshgrid and the resulting rays visualized from the origin location.
@@ -144,16 +137,6 @@ This MLP was trained on the multi-view images of a bulldozer. The hyperparamters
     NeRF progression through training. From left to right - 50 epochs, 100 epochs, 250 epochs
 </div>
 
+# Surface Reconstruction
 
-<!-- {% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %} -->
+The implementation of NeRF was extended to include Surface Reconstruction, using Neural Implicit Surfaces. Here, we implement a Neural SDF which is basically an approximation of the [signed distance function](https://en.wikipedia.org/wiki/Signed_distance_function) (SDF) for any object using a neural network. SDF is the signed orthogonal distance of a given point to the boundary of an object. The sign determines whether the point lies inside or outside the boundary. The function has positive values for points inside the boundary.

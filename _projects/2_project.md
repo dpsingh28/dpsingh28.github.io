@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Learning-based Single View to 3D 
-description: 
+description: <ul> <li> Here, I designed a Single view to 3D reconstruction pipeline, for image-to-voxel, image-to-mesh, and image-to-point cloud generation</li> <li>  </li> </ul>
 img: assets/img/projects/l3d_projects/lsv3d/chair_index.gif
 importance: 2
 category: Academic
