@@ -150,6 +150,12 @@
 <div class="card-body">
             <h3 class="card-title">Subt-MRS Dataset</h3>
             <p class="card-text"></p>
+<ul>
+<li>This project was an year-long endeavor, where I co-led a team of 5 in acquiring a 2 TB SubT-MRS SLAM dataset, collected on 3 UGVs and 1 Boston Dynamics Spot, 5 sensors including RGB camera, thermal camera, IMU, and LIDAR, and 5 locations with different characteristics</li>
+<li>As a part of data analysis, I implemented and evaluated 4 state-of-the-art SLAM algorithms, LIO-SAM, LOAM, FAST-LIO, and CLINS on the dataset to gauge the difficulty of the dataset</li>
+<li>I also designed multiple Python3 scripts for dataset cleaning and statistics generation. I also implemented a PyTorch DataLoader for the dataset and integrated it into a pip package</li>
+<li>I integrated real-time point cloud colorization into the SuperOdometry algorithm by field-of-view analysis between RGB camera and LIDAR for improving visualizations</li>
+</ul>
             <div class="row ml-1 mr-1 p-0"></div>
           </div>
         </div>
@@ -159,12 +165,31 @@
 </div>
 
       <!-- { include projects.html } --><div class="card-item col">
-<a href="/projects/affordance/"><div class="card hoverable">
+<a href="https://drive.google.com/file/d/1xfco6Hq3q6aoUkXsTaCMogzsnHESd64I/view?usp=sharing" rel="external nofollow noopener" target="_blank"><div class="card hoverable">
       <div class="row g-0">
-<div class="col-md-12">
+<div class="card-img col-md-4">
+          <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/research/affordance/affordance_icon.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        </div>
+        <div class="col-md-6">
 <div class="card-body">
-            <h3 class="card-title">Affordance Prediction</h3>
+            <h3 class="card-title">Open-Set Vocabulary Inter-Object (O2O) 3D Affordance Prediction in Point Clouds</h3>
             <p class="card-text"></p>
+<ul>
+<li>Here, we enabled natural language query-driven affordance prediction in point clouds, reaching 90% performance relative to the SOTA of closed-set affordance prediction</li>
+<li>I also performed ablation study for different point cloud architectures like PointNet, PointTransformer, and LLM architectures like CLIP, CG3D</li>
+<li>Currently we are working on advancing this object-based affordance prediction to open-set vocabulary-based inter-object prediction, utilizing sim-in-the-loop training</li>
+</ul>
             <div class="row ml-1 mr-1 p-0"></div>
           </div>
         </div>
@@ -174,12 +199,32 @@
 </div>
 
       <!-- { include projects.html } --><div class="card-item col">
-<a href="/projects/comms_sys/"><div class="card hoverable">
+<a href="https://drive.google.com/file/d/1zPGHWUOZTvmZxRHFA7Wn41yFEJPy-Ybk/view?usp=sharing" rel="external nofollow noopener" target="_blank"><div class="card hoverable">
       <div class="row g-0">
-<div class="col-md-12">
+<div class="card-img col-md-4">
+          <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/research/comms/agents_graph.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        </div>
+        <div class="col-md-6">
 <div class="card-body">
-            <h3 class="card-title">Communications</h3>
+            <h3 class="card-title">Communications and Systems Engineering</h3>
             <p class="card-text"></p>
+<ul>
+<li>I developed a C++ algorithm for generating a graph using the Signal-to-Noise Ratio (SNR) values from radios in a multi-robot setup, using Websockets and ROS-DDS</li>
+<li>Using this graph, I innovated constraints for robot motion planning by utilizing spanning trees on this SNR graph, resulting in a communication network construction algorithm. This increased exploration distances by 90% against SOTA</li>
+<li>I also devised 2 behavior trees for switching between 8 autonomy modes in the MMPUG multi-robot system with 3 UGVs and 2 Spots</li>
+<li>Among other systems engineering tasks, I integrated and calibrated a FLIR-Boson thermal camera into the existing sensor stack of 6 RGB cameras, 1 IMU, and a LIDAR with &lt;25 ms time sync delay and 60 Hz frequency</li>
+</ul>
             <div class="row ml-1 mr-1 p-0"></div>
           </div>
         </div>
@@ -308,6 +353,43 @@
 <div class="card-body">
             <h3 class="card-title">Multi-View Reconstruction</h3>
             <p class="card-text"></p>
+<ul>
+<li>In this project, I built a structure-from-motion (SfM) pipeline from scratch, employing concepts such as perspective-n-point, 8-point algorithm, and traingulation</li>
+<li>In addition to SfM, I also extended it to include Bundle adjustment, to improve camera extrinsics computation</li>
+</ul>
+            <div class="row ml-1 mr-1 p-0"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+      <!-- { include projects.html } --><div class="card-item col">
+<a href="https://drive.google.com/file/d/1lOGT1Vr7T7Pb8R0MPuur5W_ZTppBLGb2/view?usp=sharing" rel="external nofollow noopener" target="_blank"><div class="card hoverable">
+      <div class="row g-0">
+<div class="card-img col-md-4">
+          <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/slam/feature_extract/pipeline.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        </div>
+        <div class="col-md-6">
+<div class="card-body">
+            <h3 class="card-title">Feature-Extractor Voting for Visual-Inertial Odometry</h3>
+            <p class="card-text"></p>
+<ul>
+<li>In this project, I incorporated SuperPoint feature extractor into the backend optimization of VINS-MONO</li>
+<li>We created a feature voting and fusio algorithm to bridge SuperPoint visual features and classical features, whcih led to reduction of odometry failure cases by ~40%</li>
+</ul>
             <div class="row ml-1 mr-1 p-0"></div>
           </div>
         </div>
@@ -337,6 +419,10 @@
 <div class="card-body">
             <h3 class="card-title">MNIST Diffusion</h3>
             <p class="card-text"></p>
+<ul>
+<li>Here, I designed a Denoising Diffusion Probabilistic Model (DDPM) for generating the MNIST data</li>
+<li>The model was written in Pytorch and produced 80% generation for 36 sample sets of the MNIST numbers, using 10000 diffusion steps </li>
+</ul>
             <div class="row ml-1 mr-1 p-0"></div>
           </div>
         </div>
@@ -366,6 +452,10 @@
 <div class="card-body">
             <h3 class="card-title">Point Cloud Classification and Segmentation</h3>
             <p class="card-text"></p>
+<ul>
+<li>Here, I designed deep learning-based point cloud classification and segmentation models, including PointNet, PointNet++, DGCNN, and PointTransformer</li>
+<li>Point Cloud classification was achieved with an average accuracy of ~95% whereas segmentation was achieved with an average accuracy of ~98%. Ablation studies with point cloud transformations were also performed</li>
+</ul>
             <div class="row ml-1 mr-1 p-0"></div>
           </div>
         </div>

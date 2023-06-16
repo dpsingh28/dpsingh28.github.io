@@ -214,6 +214,46 @@
     </div>
 </div>
 
+<h3 id="single-view-reconstruction">Single View Reconstruction</h3>
+<p>To perform this part, we make use of the calibration technique explained in the previous section and use that to extract the calibration matrix, \(K\). We then annotate the planes in the image, which we intend to reconstruct. The equations for these planes in \(\mathcal{R}^3\) (\(n^T X+a = 0\)) are then extracted using the \(K\) matrix and the pixels present in these planes in the image, are projected into \(\mathcal{R}^3\), using these plane equations. The results for this method can be seen below.</p>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-4 mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/g3d_projects/gsv3d/garden_input.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Input Image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="caption">
+            Input image of a building
+        </div>
+    </div>
+    <div class="col-sm-4 mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/g3d_projects/gsv3d/garden_planes.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Plane Annotation" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="caption">
+            Planes annotated for reconstruction
+        </div>
+    </div>
+</div>
+
 <div class="row justify-content-sm-center">
     <div class="col-sm-0 mt-0 mt-md-0">
         <figure>
@@ -231,9 +271,47 @@
     </div>
 </div>
 <div class="caption">
-    3D Reconstruction Result
+    Building 3D Reconstruction Result
 </div>
 
+<p><br></p>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-4 mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/g3d_projects/gsv3d/mac_box_input.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Box Input Image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="caption">
+            Input Image of a Box
+        </div>
+    </div>
+    <div class="col-sm-0 mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/projects/g3d_projects/gsv3d/mac_box_rend.gif" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Box 3D Render" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="caption">
+            Box 3D reconstruction
+        </div>
+    </div>
+</div>
 
           </article>
 
