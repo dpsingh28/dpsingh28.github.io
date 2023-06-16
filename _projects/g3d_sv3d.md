@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Absolute Conic-based Single View to 3D
-description: <ul><li>This project deals with single view to 3D reconstruction using classical geometric vision concepts. Here, we first design a single image-based intrinsics calculation module, using the concepts of Image of Absolute Conic</li><li>Using this baseline calibration technique, we design the 3D reconstruction pipeline, using manual plane annotations</li></ul>
+description: <ul><li>This project deals with single view to 3D reconstruction using classical geometric vision concepts. Here, we first design a single image-based camera intrinsics calibration module, using the concepts of Image of Absolute Conic</li><li>Using this baseline calibration technique, we design the 3D reconstruction pipeline, using manual plane annotations</li></ul>
 img: assets/img/projects/g3d_projects/gsv3d/gsv3d_icon.gif
 importance: 3
 category: Academic
@@ -22,47 +22,64 @@ $$
 The image of the absolute conic (IAC), $$\omega$$, is the image of the absolute conic in a camera and it relates to the intrinsics matrix as,
 
 $$
-\omega = (KK^T)^{-1}
+\begin{equation}
+    \omega = (KK^T)^{-1}    
+\end{equation}
 $$
 
 
 ### Camera Calibration using Vanishing Points
-Here, we design a camera intrinsics calibration method, using parallel lines annotations. A triplet of parallel lines in an image has the ability to extract the matrix for the Image of Absolute Conic. This matrix can in turn be used to retrieve the camera intrinsic matrix.<br>
+Here, we design a camera intrinsics calibration method, using parallel lines annotations. A triplet of parallel lines in an image has the ability to extract the matrix for the Image of Absolute Conic. This matrix can in turn be used to retrieve the camera intrinsic matrix.
 
+Vanishing points are points where the image of two parallel lines from world space meet in the image space. Vanishing points have a property with the Image of the Absolute Conic, $$\omega$$,
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+$$
+\begin{equation}
+    \texttt{Given two vanishing points, } v_1, v_2 : \hspace{0.5cm} v_1^T \omega v_2^T =0
+\end{equation}
+$$
 
+Using this property, if we assume that the image sensor has square pixels and zero skew, the IAC takes a form
+
+$$
+\omega = \begin{bmatrix}
+    \omega_1 & 0 & \omega_2 \\
+    0 & \omega_1 & \omega_3 \\
+    \omega_2 & \omega_3 & \omega_4
+\end{bmatrix}
+$$
+
+This form of IAC can be resolved using equation (2), if we have three sets of vanishing points. The intrinsics matrix, $$K$$, can then be resolved by taking a cholesky decomposition of the IAC, $$\omega$$, as shown in equation (1).
+
+Using this strategy, we can resolve the intrinsics matrix, by first finding three vanishing points, by annotating three sets of parallel lines in the image, as shown in the figure below.
 
 <div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm-4 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/projects/g3d_projects/gsv3d/image_normal.png" title="Query Image" class="img-fluid rounded z-depth-1" %}
+        <div class="caption">
+            Query Image
+        </div>
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects/g3d_projects/gsv3d/image_lines.png" title="Parallel Lines Annotation" class="img-fluid rounded z-depth-1" %}
+        <div class="caption">
+            Parallel Lines Annotation
+        </div>
+    </div>
+    <div class="col-sm-4 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/projects/g3d_projects/gsv3d/image_vanishing.jpeg" title="Vanishing Points" class="img-fluid rounded z-depth-1" %}
+        <div class="caption">
+            Vanishing Points in the image space
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-0 mt-0 mt-md-0">
+        {% include figure.html path="assets/img/projects/g3d_projects/gsv3d/building_ply.GIF" title="Building Reconstruction" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    3D Reconstruction Result
 </div>
 
