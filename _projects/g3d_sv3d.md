@@ -74,12 +74,47 @@ Using this strategy, we can resolve the intrinsics matrix, by first finding thre
     </div>
 </div>
 
+### Single View Reconstruction
+To perform this part, we make use of the calibration technique explained in the previous section and use that to extract the calibration matrix, $$K$$. We then annotate the planes in the image, which we intend to reconstruct. The equations for these planes in $$\mathcal{R}^3$$ ($$n^T X+a = 0$$) are then extracted using the $$K$$ matrix and the pixels present in these planes in the image, are projected into $$\mathcal{R}^3$$, using these plane equations. The results for this method can be seen below.
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-4 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/projects/g3d_projects/gsv3d/garden_input.png" title="Input Image" class="img-fluid rounded z-depth-1" %}
+        <div class="caption">
+            Input image of a building
+        </div>
+    </div>
+    <div class="col-sm-4 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/projects/g3d_projects/gsv3d/garden_planes.png" title="Plane Annotation" class="img-fluid rounded z-depth-1" %}
+        <div class="caption">
+            Planes annotated for reconstruction
+        </div>
+    </div>
+</div>
+
+
 <div class="row justify-content-sm-center">
     <div class="col-sm-0 mt-0 mt-md-0">
         {% include figure.html path="assets/img/projects/g3d_projects/gsv3d/building_ply.GIF" title="Building Reconstruction" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    3D Reconstruction Result
+    Building 3D Reconstruction Result
 </div>
 
+<br>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-4 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/projects/g3d_projects/gsv3d/mac_box_input.png" title="Box Input Image" class="img-fluid rounded z-depth-1" %}
+        <div class="caption">
+            Input Image of a Box
+        </div>
+    </div>
+    <div class="col-sm-0 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/projects/g3d_projects/gsv3d/mac_box_rend.gif" title="Box 3D Render" class="img-fluid rounded z-depth-1" %}
+        <div class="caption">
+            Box 3D reconstruction
+        </div>
+    </div>
+</div>
