@@ -7,4 +7,15 @@ importance: 4
 category: Academic
 ---
 
-This project detials multi-view 3D reconstruction using classical geometric computer vision techniques such as SfM and Bundle Adjustment.
+
+<br>
+<br>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-0 mt-0 mt-md-0">
+        {% include figure.html path="assets/img/projects/g3d_projects/mvrecon/mvrecon_icon.gif" title="Cow model reconstruction using Bundle Adjustment, for 4 camera views" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Cow model reconstruction using Bundle Adjustment, for 4 camera views
+</div>
