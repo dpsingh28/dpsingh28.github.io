@@ -111,7 +111,10 @@ To perform this part, we make use of the calibration technique explained in the 
             Input Image of a Box
         </div>
     </div>
-    <div class="col-sm-0 mt-3 mt-md-0">
+</div>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-0 mt-10 mt-md-0">
         {% include figure.html path="assets/img/projects/g3d_projects/gsv3d/mac_box_rend.gif" title="Box 3D Render" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
             Box 3D reconstruction
