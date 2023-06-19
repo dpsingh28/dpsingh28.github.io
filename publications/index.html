@@ -151,11 +151,11 @@
         <div class="author">
         
 
-        Namya Bagree, Charles Noren, <em>Damanpreet Singh</em>, and
-          <span class="more-authors" title="click to view 2 more authors" onclick="
+        Namya Bagree, Charles Noren, <em>Damanpreet Singh</em>, Matthew Travers, and
+          <span class="more-authors" title="click to view 1 more author" onclick="
                 var element = $(this);
                 element.attr('title', '');
-                var more_authors_text = element.text() == '2 more authors' ? 'Matthew Travers, Bhaskar Vundurthy' : '2 more authors';
+                var more_authors_text = element.text() == '1 more author' ? 'Bhaskar Vundurthy' : '1 more author';
                 var cursorPosition = 0;
                 var textAdder = setInterval(function(){
                   element.text(more_authors_text.substring(0, cursorPosition + 1));
@@ -163,7 +163,7 @@
                     clearInterval(textAdder);
                   }
               }, '10');
-              ">2 more authors</span>
+              ">1 more author</span>
 </div>
 
         <!-- Journal/Book title and date -->
@@ -244,20 +244,7 @@
         <div class="author">
         
 
-        Shibo Zhao, <em>Damanpreet Singh</em>, <a href="https://scholar.google.com/citations?hl=en&amp;user=gxoPfIYAAAAJ" rel="external nofollow noopener" target="_blank">Sebastian Scherer</a>, and
-          <span class="more-authors" title="click to view 1 more author" onclick="
-                var element = $(this);
-                element.attr('title', '');
-                var more_authors_text = element.text() == '1 more author' ? ' others' : '1 more author';
-                var cursorPosition = 0;
-                var textAdder = setInterval(function(){
-                  element.text(more_authors_text.substring(0, cursorPosition + 1));
-                  if (++cursorPosition == more_authors_text.length){
-                    clearInterval(textAdder);
-                  }
-              }, '10');
-              ">1 more author</span>
-</div>
+        Shibo Zhao, <em>Damanpreet Singh</em>, <a href="https://scholar.google.com/citations?hl=en&amp;user=gxoPfIYAAAAJ" rel="external nofollow noopener" target="_blank">Sebastian Scherer</a>, and  others</div>
 
         <!-- Journal/Book title and date -->
         
