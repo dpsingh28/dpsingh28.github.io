@@ -1,5 +1,5 @@
 FROM bitnami/minideb:latest
-Label MAINTAINER Amir Pourmand
+Label MAINTAINER Damanpreet Singh
 RUN apt-get update -y
 # add locale
 RUN apt-get -y install locales
